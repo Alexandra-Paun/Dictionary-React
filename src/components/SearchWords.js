@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-function SearchWords({ list }) {
+function SearchWords({ wordList }) {
   const [word, setWord] = useState('');
   const [message, setMessage] = useState('');
 
   const search = () => {
-    if (list.includes(word)) {
+    if (wordList.includes(word)) {
       setMessage('The word ' + word + ' exists in the dictionary!');
     } else {
       setMessage('The word ' + word + " doesn't exist in the dictionary!");
